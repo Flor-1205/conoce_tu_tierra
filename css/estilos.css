@@ -1,0 +1,573 @@
+/* Estilos en general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f8f4;
+    color: #243b35;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Encabezado y menú */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #173f35;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: #243b35;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #72916a;
+}
+
+/* Portada principal */
+.portada {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(9, 37, 34, 0.80),
+            rgba(9, 37, 34, 0.15)
+        ),
+        url("../img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.texto-portada {
+    max-width: 520px;
+}
+
+.subtitulo {
+    color: #76966c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.texto-portada .subtitulo {
+    color: #dce9d3;
+}
+
+.texto-portada h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.texto-portada > p:not(.subtitulo) {
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #315d43;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.boton:hover {
+    background-color: #234633;
+}
+
+/* Sección de destinos */
+.destinos {
+    padding: 75px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h2,
+.texto-gastronomia h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.titulo-seccion > p:last-child {
+    color: #68766f;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-tarjeta {
+    padding: 22px;
+}
+
+.contenido-tarjeta h3 {
+    margin-bottom: 8px;
+}
+
+.contenido-tarjeta p {
+    color: #68766f;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contenido-tarjeta a {
+    color: #315d43;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Gastronomía */
+.gastronomia {
+    background-color: #eaf0e7;
+    padding: 65px 7%;
+}
+
+.texto-gastronomia {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.texto-gastronomia > p:not(.subtitulo) {
+    margin-bottom: 22px;
+    color: #53665b;
+}
+
+.contenedor-comidas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.comida {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 18px;
+}
+
+.comida img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.comida h3,
+.comida p {
+    margin: 12px 16px 0;
+}
+
+.comida p {
+    color: #68766f;
+    font-size: 14px;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #173f35;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.pie-pagina p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 850px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .texto-portada h1 {
+        font-size: 38px;
+    }
+
+    .contenedor-tarjetas,
+    .contenedor-comidas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .portada {
+        min-height: 430px;
+        padding: 45px 7%;
+    }
+
+    .texto-portada h1 {
+        font-size: 34px;
+    }
+
+    .contenedor-tarjetas,
+    .contenedor-comidas {
+        grid-template-columns: 1fr;
+    }
+
+    .destinos,
+    .gastronomia {
+        padding: 45px 6%;
+    }
+
+    .titulo-seccion h2,
+    .texto-gastronomia h2 {
+        font-size: 27px;
+    }
+}
+
+/* Portada de la página de destinos */
+.portada-destinos {
+    padding: 30px 6%;
+    background-color: #355f81;
+    color: white;
+    text-align: center;
+}
+
+.portada-destinos h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.portada-destinos > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.portada-destinos .subtitulo {
+    color: #c9dec2;
+}
+
+/* Introducción */
+.introduccion-rutas {
+    text-align: center;
+    padding: 55px 7% 20px;
+}
+
+.introduccion-rutas h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.introduccion-rutas p {
+    color: #68766f;
+}
+
+/* Bloques de cada ruta */
+.ruta {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 35px;
+    align-items: start;
+    padding: 55px 7%;
+    border-bottom: 1px solid #dfe5dd;
+}
+
+.ruta-imagen img {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.ruta-contenido h2 {
+    color: #173f35;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.ruta-contenido h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.ruta-contenido h4 {
+    color: #315d43;
+    margin: 22px 0 10px;
+}
+
+.ruta-contenido p,
+.ruta-contenido li {
+    color: #52635a;
+    font-size: 15px;
+}
+
+.ruta-contenido ul {
+    padding-left: 22px;
+    margin-bottom: 15px;
+}
+
+.ruta-contenido li {
+    margin-bottom: 5px;
+}
+
+/* Tablas de distancias */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 13px;
+}
+
+.tabla-contenedor caption {
+    text-align: left;
+    font-weight: bold;
+    color: #315d43;
+    padding: 10px 0;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+    padding: 12px 10px;
+    text-align: left;
+    border: 1px solid #dfe5dd;
+}
+
+.tabla-contenedor th {
+    background-color: #eaf0e7;
+    color: #173f35;
+}
+
+.tabla-contenedor tbody tr:nth-child(even) {
+    background-color: #f7f8f4;
+}
+
+.nota-tabla {
+    margin-top: 10px;
+    font-size: 13px !important;
+    font-style: italic;
+}
+
+/* Invitación final */
+.aviso-viaje {
+    margin: 50px 7%;
+    padding: 35px;
+    background-color: #eaf0e7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.aviso-viaje h2 {
+    color: #173f35;
+    margin-bottom: 12px;
+}
+
+.aviso-viaje p {
+    max-width: 750px;
+    margin: 0 auto 22px;
+    color: #52635a;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 850px) {
+    .ruta {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+
+    .ruta-imagen img {
+        height: 280px;
+        min-height: auto;
+    }
+
+    .portada-destinos h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 550px) {
+    .portada-destinos {
+        padding: 55px 6%;
+    }
+
+    .portada-destinos h1 {
+        font-size: 29px;
+    }
+
+    .ruta-contenido h2 {
+        font-size: 25px;
+    }
+
+    .aviso-viaje {
+        margin: 35px 6%;
+        padding: 25px 18px;
+    }
+}
+.imagen-portada-destinos {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    margin: 35px auto 0;
+    border-radius: 12px;
+}
+
+.portada-cultura {
+    background-color: #A64B35;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.historia {
+    padding: 30px 20px;
+    background-color: #FFF4E8;
+}
+.tarjetas-proseres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tarjeta-proseres {
+    background-color: #cea2b0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tarjeta-proseres img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tarjeta-proseres h3 {
+    font-size: 18px;
+}
+
+.tarjeta-proseres p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.etnias {
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.tarjetas-cultura {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-cultura {
+    background-color: #F4E2D5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tarjetas-gastronomia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-gastronomia {
+    background-color: #FFF4E8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tarjeta-gastronomia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tarjeta-cultura img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.tarjeta img,
+.contenedor-comidas img,
+.tarjeta-gastronomia img,
+.tarjeta-proseres,
+.tarjeta-cultura img {
+    transition: transform 0.3s;
+}
+
+.tarjeta img:hover,
+.contenedor-comidas img:hover,
+.tarjeta-gastronomia img:hover,
+.tarjeta-proseres img:hover,
+.tarjeta-cultura img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+    .tarjetas-cultura,
+    .tarjetas-gastronomia {
+        grid-template-columns: 1fr;
+    }
+}
