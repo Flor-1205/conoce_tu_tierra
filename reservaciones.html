@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Conoce tu Tierra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">Conoce tu Tierra</a>
+        
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="reservaciones.html" class="activo">Reservaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="portada-reservaciones">
+            <h1>Reserva tu próxima aventura</h1>
+            <p>
+                Planifica tu viaje y conoce los paisajes,
+                la cultura y las tradiciones de Honduras.
+            </p>
+        </section>
+
+        <section class="formulario-reservacion">
+            <h2>Solicitud de tours y reservaciones</h2>
+
+            <p>
+                Completa el formulario con tus datos y las características
+                del viaje que deseas realizar.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nombre">Nombre completo del titular:</label>
+                <input type="text" id="nombre" name="nombre"
+                       required minlength="3" maxlength="100">
+
+                <label for="telefono">Número telefónico:</label>
+                <input type="tel" id="telefono" name="telefono"
+                       required minlength="8" maxlength="15"
+                       pattern="[0-9+\- ]{8,15}"
+                       title="Escribe un número de teléfono válido">
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="destino">Circuito turístico o destino:</label>
+                <select id="destino" name="destino" required>
+                    <option value="">Selecciona un destino</option>
+                    <option value="copan">Ruta Maya: Copán Ruinas</option>
+                    <option value="la-esperanza">Ruta Lenca: La Esperanza</option>
+                    <option value="celaque">Ecoturismo: Parque Nacional Celaque</option>
+                    <option value="roatan">Caribe: Roatán</option>
+                </select>
+
+                <label for="inicio">Fecha prevista de inicio:</label>
+                <input type="date" id="inicio" name="inicio" required>
+
+                <label for="retorno">Fecha prevista de retorno:</label>
+                <input type="date" id="retorno" name="retorno" required>
+
+                <label for="adultos">Número de adultos:</label>
+                <input type="number" id="adultos" name="adultos"
+                       min="0" max="100" value="1" required>
+
+                <label for="menores">Número de menores:</label>
+                <input type="number" id="menores" name="menores"
+                       min="0" max="100" value="0" required>
+
+                <label for="hospedaje">Tipo de hospedaje:</label>
+                <select id="hospedaje" name="hospedaje" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="cabana">Cabaña ecológica</option>
+                    <option value="hotel">Hotel colonial</option>
+                    <option value="campamento">Campamento de montaña</option>
+                </select>
+
+                <p>Servicios y necesidades especiales:</p>
+
+                <label>
+                    <input type="checkbox" name="accesibilidad" value="si">
+                    Necesito servicios de accesibilidad
+                </label>
+
+                <label>
+                    <input type="checkbox" name="guia" value="si">
+                    Solicito guía bilingüe
+                </label>
+
+                <label for="observaciones">Otras necesidades o comentarios:</label>
+                <textarea id="observaciones" name="observaciones"
+                          rows="4" maxlength="500"></textarea>
+
+                <label>
+                    <input type="checkbox" name="conservacion"
+                           value="acepto" required>
+                    Confirmo que respetaré las normas de conservación
+                    ecológica y protección del patrimonio cultural.
+                </label>
+
+                <button type="submit">Enviar solicitud</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Conoce tu Tierra | Descubre Honduras</p>
+    </footer>
+
+</body>
+</html>

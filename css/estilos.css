@@ -44,7 +44,10 @@ a {
 .menu a:hover {
     color: #72916a;
 }
-
+.menu a.activo {
+    color: #315d43;
+    font-weight: bold;
+}
 /* Portada principal */
 .portada {
     min-height: 520px;
@@ -55,8 +58,8 @@ a {
     background-image:
         linear-gradient(
             90deg,
-            rgba(9, 37, 34, 0.80),
-            rgba(9, 37, 34, 0.15)
+            rgba(40, 78, 74, 0.336),
+            rgba(19, 63, 59, 0.15)
         ),
         url("../img/portada.jpg");
     background-size: cover;
@@ -569,5 +572,137 @@ a {
     .tarjetas-cultura,
     .tarjetas-gastronomia {
         grid-template-columns: 1fr;
+    }
+}
+.portada-reservaciones {
+    background-color: #183B56;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.formulario-reservacion {
+    background-color: #F0F5F7;
+    padding: 25px;
+    max-width: 650px;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+.formulario-reservacion h2 {
+    color: #183B56;
+    text-align: center;
+}
+
+.formulario-reservacion form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-reservacion input,
+.formulario-reservacion select,
+.formulario-reservacion textarea {
+    padding: 10px;
+    border: 1px solid #B8C9D3;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-reservacion button {
+    background-color: #183B56;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-reservacion button:hover {
+    background-color: #4E91A6;
+}
+
+.portada-contacto {
+    background-color: #88621D;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.informacion-contacto,
+.canales-digitales {
+    padding: 25px 20px;
+}
+
+.informacion-contacto h2,
+.canales-digitales h2 {
+    color: #88621D;
+}
+
+.tarjetas-contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-contacto {
+    background-color: #FFF9ED;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tarjeta-contacto a,
+.canales-digitales a {
+    color: #88621D;
+}
+
+.formulario-contacto {
+    background-color: #FFF9ED;
+    padding: 25px;
+    max-width: 650px;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+.formulario-contacto h2 {
+    color: #88621D;
+    text-align: center;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #D9C79F;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-contacto button {
+    background-color: #88621D;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #A67B2D;
+}
+
+@media (max-width: 700px) {
+    .tarjetas-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-contacto {
+        margin: 20px;
     }
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Conoce tu Tierra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">Conoce tu Tierra</a>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura y Gastronomía</a>
+            <a href="reservaciones.html">Reservaciones</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="portada-contacto">
+            <h1>Contáctanos</h1>
+            <p>
+                ¿Quieres conocer más sobre Honduras?
+                Aquí puedes encontrar información y algunos medios de contacto.
+            </p>
+        </section>
+
+        <section class="informacion-contacto">
+            <h2>Información de contacto</h2>
+
+            <div class="tarjetas-contacto">
+
+                <div class="tarjeta-contacto">
+                    <h3>Oficina de Turismo</h3>
+                    <p>
+                        Instituto Hondureño de Turismo
+                    </p>
+                    <p>
+                        Centro Cívico Gubernamental, Torre 2,
+                        pisos 7 y 8, bulevar Juan Pablo II,
+                        Tegucigalpa, Honduras.
+                    </p>
+                    <p>
+                        Teléfono: (+504) 2242-7920
+                    </p>
+                    <p>
+                        Correo:
+                        <a href="mailto:tourisminfo@iht.hn">
+                            tourisminfo@iht.hn
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Instituto+Hondure%C3%B1o+de+Turismo+Tegucigalpa"
+                           target="_blank">
+                            Ver ubicación en el mapa
+                        </a>
+                    </p>
+                </div>
+
+                <div class="tarjeta-contacto">
+                    <h3>Emergencias</h3>
+                    <p>
+                        Si durante tu viaje tienes una emergencia
+                        y necesitas ayuda, puedes llamar al número
+                        de emergencias.
+                    </p>
+                    <p>
+                        Teléfono: 911
+                    </p>
+                </div>
+
+                <div class="tarjeta-contacto">
+                    <h3>Ayuda en carretera</h3>
+                    <p>
+                        Si tu vehículo presenta algún problema
+                        durante el viaje, busca ayuda de las
+                        autoridades correspondientes.
+                    </p>
+                    <p>
+                        Si es una emergencia, llama al 911.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="canales-digitales">
+            <h2>También puedes encontrarnos en internet</h2>
+
+            <p>
+                Para conocer más sobre los lugares turísticos
+                de Honduras, puedes visitar la página del
+                Instituto Hondureño de Turismo.
+            </p>
+
+            <p>
+                <a href="https://www.iht.hn/" target="_blank">
+                    Visitar página web
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.facebook.com/" target="_blank">
+                    Facebook
+                </a>
+                |
+                <a href="https://www.instagram.com/" target="_blank">
+                    Instagram
+                </a>
+            </p>
+        </section>
+
+        <section class="formulario-contacto">
+            <h2>Escríbenos</h2>
+
+            <p>
+                Si tienes alguna pregunta, comentario o sugerencia,
+                puedes escribirla en el siguiente formulario.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nombre-contacto">Nombre completo:</label>
+                <input type="text" id="nombre-contacto"
+                       name="nombre" required maxlength="100">
+
+                <label for="correo-contacto">Correo electrónico:</label>
+                <input type="email" id="correo-contacto"
+                       name="correo" required>
+
+                <label for="asunto">¿Sobre qué deseas consultar?</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="informacion">Información turística</option>
+                    <option value="comentario">Comentario o sugerencia</option>
+                    <option value="asistencia">Solicitud de ayuda</option>
+                    <option value="otro">Otro asunto</option>
+                </select>
+
+                <label for="mensaje-contacto">Tu mensaje:</label>
+                <textarea id="mensaje-contacto" name="mensaje"
+                          rows="5" maxlength="1000" required></textarea>
+
+                <button type="submit">Enviar consulta</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Conoce tu Tierra | Descubre Honduras</p>
+    </footer>
+
+</body>
+</html>
